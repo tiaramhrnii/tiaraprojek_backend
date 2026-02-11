@@ -1,5 +1,5 @@
 <?php
-// WAJIB: Header agar Flutter Web (Chrome) bisa mengakses server local
+
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: *");
 header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
@@ -9,8 +9,7 @@ include 'koneksi.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
-    // Mengambil data dan mencegah error jika field kosong (Menggunakan isset)
-    $nama    = isset($_POST['nama']) ? $_POST['nama'] : '';
+$nama    = isset($_POST['nama']) ? $_POST['nama'] : '';
     $email   = isset($_POST['email']) ? $_POST['email'] : '';
     $alamat  = isset($_POST['alamat']) ? $_POST['alamat'] : '';
     $tplahir = isset($_POST['tplahir']) ? $_POST['tplahir'] : '';
